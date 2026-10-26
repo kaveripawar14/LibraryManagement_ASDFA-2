@@ -1,5 +1,7 @@
 import unittest
+
 from app import app, books
+
 
 class LibraryAppTests(unittest.TestCase):
     def setUp(self):
