@@ -65,4 +65,6 @@ Create a Render Web Service connected to this GitHub repository.
 - Name: `RENDER_DEPLOY_HOOK_URL`; value: the Render deploy hook URL.
 - Push to `main`; after tests and Ruff pass, the workflow triggers deployment.
 
+  CI/CD deployment configured successfully.
+
 Note: this is a teaching demo and stores sample books in memory; it is not a production database.
