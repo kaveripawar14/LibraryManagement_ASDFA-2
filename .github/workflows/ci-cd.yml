@@ -74,10 +74,11 @@ jobs:
         env:
           RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
         run: |
-         if [ -n "$RENDER_DEPLOY_HOOK_URL" ]; then
-         curl --fail --silent --show-error -X POST "$RENDER_DEPLOY_HOOK_URL"
-         echo "Render deployment triggered."
-         else
-         echo "Deployment skipped: add RENDER_DEPLOY_HOOK_URL in GitHub repository secrets."
-        
+          if [ -n "$RENDER_DEPLOY_HOOK_URL" ]; then
+            curl --fail --silent --show-error -X POST "$RENDER_DEPLOY_HOOK_URL"
+            echo "Render deployment triggered."
+          else
+            echo "Deployment skipped: add RENDER_DEPLOY_HOOK_URL in GitHub repository secrets."
+            exit 1
           fi
+
